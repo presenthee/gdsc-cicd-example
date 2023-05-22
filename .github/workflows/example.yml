@@ -20,8 +20,8 @@ jobs:
 
       - name: Check Linting
         run: npm run lint
-        if: ${{ always() }} # can skip expression syntax here ${{}}
+        if: ${{ always() }}
 
       - name: Build
         run: npm run build
-        if: github.ref_name == "main"
+        if: ${{ github.ref_name == "main" }}
